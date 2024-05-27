@@ -20,7 +20,7 @@ function Job({ job, onAddTag }: jobProps) {
         alt="Company Logo Image"
       />
       <header className="job__header">
-        <h3 className="job__company-name">{job.company}</h3>
+        <h2 className="job__company-name">{job.company}</h2>
         <ul className="job__badges">
           {job.new && (
             <li>
