@@ -12,9 +12,9 @@ interface JobFilterProps {
 }
 
 function JobFilter({ tags, onDeleteTag, onClearTags }: JobFilterProps) {
-  const filterableTags = tags.map((tag) => {
+  const filterableTags = tags.map((tag, index) => {
     return (
-      <li>
+      <li key={index}>
         <Tablet text={tag} asLabel={true} />
         <RemoveButton onClick={() => onDeleteTag(tag)} />
       </li>

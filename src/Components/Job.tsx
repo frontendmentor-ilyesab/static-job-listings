@@ -4,6 +4,8 @@ import Tablet from "./Low Level/Tablet.tsx";
 import type { Job } from "../data.ts";
 import "../CSS/Job.css";
 
+import imgUrls from "../imgUrls.ts";
+
 interface jobProps {
   job: Job;
   onAddTag: (tag: string) => void;
@@ -12,7 +14,11 @@ interface jobProps {
 function Job({ job, onAddTag }: jobProps) {
   return (
     <Box featured={job.featured || undefined}>
-      <img className="job__image" src={job.logo} alt="Company Logo Image" />
+      <img
+        className="job__image"
+        src={imgUrls[job.logo]}
+        alt="Company Logo Image"
+      />
       <header className="job__header">
         <h3 className="job__company-name">{job.company}</h3>
         <ul className="job__badges">
