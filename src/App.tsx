@@ -56,6 +56,7 @@ function App() {
         </section>
       )}
       <main className={`site-main ${tags.length > 0 && " push-up"}`}>
+        <h1 className="visually-hidden">Jobs Listings</h1>
         {jobsJsx}
       </main>
     </>
