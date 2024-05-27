@@ -1,0 +1,14 @@
+.clear-button {
+  background: none;
+  border: none;
+  color: var(--dark-gray-cyan);
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.clear-button:is(:hover, :focus, :active) {
+  text-decoration: underline currentColor solid;
+  text-underline-offset: 3px;
+  color: var(--desaturated-dark-cyan);
+  cursor: pointer;
+}

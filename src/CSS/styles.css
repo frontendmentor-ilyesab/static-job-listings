@@ -1,0 +1,115 @@
+/* Font Import */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+/* CSS Custom Properties */
+:root {
+  /* Primary Colors */
+  --desaturated-dark-cyan: hsl(180, 29%, 50%);
+
+  /* Neutral Colors */
+  --light-gray-cyan-background: hsl(180, 52%, 96%);
+  --light-gray-cyan-tablets: hsl(180, 31%, 95%);
+  --dark-gray-cyan: hsl(180, 8%, 52%);
+  --very-dark-gray-cyan: hsl(180, 14%, 20%);
+
+  /* Shadow Color */
+  --box-shadow-color: hsl(180, 30%, 85%);
+
+  /* Img Sizes */
+  --img-mobile: 44px;
+  --img-desktop: 88px;
+
+  /* Spacing */
+  --site-inline-spacing: 1.5rem;
+  --box-padding: 1.5rem;
+  --box-padding-left: 1.5rem;
+  --tablets-gap: 1.1rem;
+
+  /* Border Radius */
+  --tablets-radius: 0.25rem;
+
+  /* transformY value */
+  --transform-y: translateY(calc((20px + 30.5px / 2) * -1));
+}
+
+/* Global Styles */
+
+html {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+#root {
+  background-color: var(--light-gray-cyan-background);
+  font-size: 0.9375rem; /* 15px font size*/
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  align-content: start;
+}
+
+.site-header {
+  background-color: var(--desaturated-dark-cyan);
+  & .desktop-image {
+    display: none;
+  }
+}
+
+.site-main {
+  padding: calc(2rem + var(--img-mobile) / 2) var(--site-inline-spacing) 2rem;
+  display: grid;
+  gap: calc(var(--img-mobile));
+  width: 100%;
+  max-width: 768px;
+}
+
+.categories {
+  padding-inline: var(--site-inline-spacing);
+  width: 100%;
+  max-width: 768px;
+  transform: var(--transform-y);
+}
+
+.site-main.push-up {
+  transform: var(--transform-y);
+}
+
+@media screen and (min-width: 376px) {
+  .site-header {
+    & .desktop-image {
+      display: block;
+    }
+    & .mobile-image {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .site-main {
+    padding: 5rem 0 8rem;
+    gap: 1.5rem;
+  }
+  .site-main.push-up {
+    padding-block-start: 3rem;
+  }
+  .categories {
+    padding-inline: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-main,
+  .categories {
+    max-width: 900px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .site-main,
+  .categories {
+    max-width: 1100px;
+  }
+}

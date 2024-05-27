@@ -1,0 +1,12 @@
+.remove-button {
+  background-color: var(--desaturated-dark-cyan);
+  border: none;
+  border-top-right-radius: var(--tablets-radius);
+  border-bottom-right-radius: var(--tablets-radius);
+  padding: 0.5rem;
+}
+
+.remove-button:is(:hover, :focus, :active) {
+  background-color: var(--very-dark-gray-cyan);
+  cursor: pointer;
+}

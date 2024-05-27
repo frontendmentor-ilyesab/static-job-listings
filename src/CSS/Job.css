@@ -1,0 +1,113 @@
+.job__image {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 0;
+  left: var(--box-padding-left);
+  transform: translateY(-50%);
+}
+
+.job__header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  & .job__company-name {
+    color: var(--desaturated-dark-cyan);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    position: relative;
+    top: 5%;
+  }
+
+  & .job__badges {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.job__content {
+  display: grid;
+  gap: 1rem;
+  & .job__role {
+    color: var(--very-dark-gray-cyan);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  & .job__role:hover {
+    color: var(--desaturated-dark-cyan);
+    cursor: pointer;
+  }
+  & .job__info {
+    color: var(--dark-gray-cyan);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    gap: 0.75rem;
+
+    & .dot {
+      background-color: currentColor;
+      border-radius: 50%;
+      display: inline;
+      width: 4px;
+      height: 4px;
+      opacity: 0.7;
+    }
+  }
+}
+
+.job__tablets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--tablets-gap);
+}
+
+@media screen and (max-width: 374px) {
+  .job__header {
+    gap: 1rem;
+  }
+  .job__content .job__info {
+    gap: 0.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .box {
+    grid-template-columns: 88px max-content 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "image header tablets"
+      "image content tablets";
+  }
+  .job__image {
+    width: 88px;
+    height: 88px;
+    position: static;
+    transform: unset;
+    grid-area: image;
+  }
+  .job__header {
+    grid-area: header;
+    gap: 1rem;
+  }
+  .job__content {
+    grid-area: content;
+    row-gap: 0.25rem;
+    & .job__role {
+      font-size: 1.25rem;
+    }
+  }
+  .job__separator {
+    display: none;
+  }
+  .job__tablets {
+    grid-area: tablets;
+    justify-self: end;
+    align-content: center;
+    justify-content: end;
+  }
+}

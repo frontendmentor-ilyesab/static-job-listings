@@ -1,0 +1,17 @@
+.badge--new {
+  background-color: var(--desaturated-dark-cyan);
+}
+
+.badge--featured {
+  background-color: var(--very-dark-gray-cyan);
+}
+
+.badge {
+  border-radius: 1rem;
+  color: white;
+  padding: 7px 8px 4px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  font-size: 0.8rem;
+}

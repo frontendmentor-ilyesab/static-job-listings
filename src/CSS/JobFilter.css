@@ -1,0 +1,11 @@
+.tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--tablets-gap);
+
+  & > * {
+    display: flex;
+  }
+}

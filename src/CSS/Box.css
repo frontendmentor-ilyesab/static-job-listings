@@ -1,0 +1,46 @@
+.box {
+  background-color: white;
+  border-radius: 0.25rem;
+  padding: var(--box-padding);
+  padding-block-start: 2rem;
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  box-shadow: 0px 10px 25px 0px var(--box-shadow-color);
+}
+
+.box--featured {
+  --box-padding-left: calc(var(--box-padding) - 5px);
+  border-inline-start: 5px solid var(--desaturated-dark-cyan);
+  padding-inline-start: var(--box-padding-left);
+}
+
+.box--filter {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1.25rem;
+  gap: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .box {
+    padding: 2rem;
+    row-gap: 0.25rem;
+    column-gap: 1.5rem;
+  }
+  .box--filter {
+    padding-block: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .box--filter {
+    max-width: 1000px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .box--filter {
+    max-width: 1200px;
+  }
+}
