@@ -22,8 +22,16 @@ function Job({ job, onAddTag }: jobProps) {
       <header className="job__header">
         <h3 className="job__company-name">{job.company}</h3>
         <ul className="job__badges">
-          {job.new && <Badge type="new" />}
-          {job.featured && <Badge type="featured" />}
+          {job.new && (
+            <li>
+              <Badge type="new" />
+            </li>
+          )}
+          {job.featured && (
+            <li>
+              <Badge type="featured" />
+            </li>
+          )}
         </ul>
       </header>
       <section className="job__content">
